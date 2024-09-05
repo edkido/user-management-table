@@ -1,0 +1,90 @@
+@import './variables.scss';
+
+body.light-mode {
+  @include theme('light');
+}
+
+body.dark-mode {
+  @include theme('dark');
+}
+
+.user-filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &__select,
+  &__input {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: #007bff;
+    }
+  }
+
+  &__select {
+    min-width: 120px;
+  }
+
+  &__input {
+    flex: 1;
+  }
+}
+
+.user-table {
+  width: 100%;
+  min-width: 876px;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  &__header {
+    background-color: var(--border-color);
+    text-align: left;
+    border-bottom: 2px solid var(--border-color);
+
+    &-cell {
+      padding: 10px;
+      font-weight: bold;
+      border-right: 1px solid var(--border-color);
+      color: var(--text-color);
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  &__body {
+    &-row {
+      &:nth-child(even) {
+        background-color: var(--hover-color);
+      }
+      &:hover {
+        background-color: var(--border-color);
+      }
+    }
+
+    &-cell {
+      padding: 10px;
+      border-bottom: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      color: var(--text-color);
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

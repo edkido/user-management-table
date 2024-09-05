@@ -1,0 +1,23 @@
+$color-light-bg: #ffffff;
+$color-light-text: #333333;
+$color-light-border: #b2b1b1;
+$color-light-hover: #f1f1f1;
+
+$color-dark-bg: #1e1e1e;
+$color-dark-text: #f0f0f0;
+$color-dark-border: #444444;
+$color-dark-hover: #333333;
+
+@mixin theme($mode) {
+  @if $mode == 'light' {
+    --bg-color: #{$color-light-bg};
+    --text-color: #{$color-light-text};
+    --border-color: #{$color-light-border};
+    --hover-color: #{$color-light-hover};
+  } @else if $mode == 'dark' {
+    --bg-color: #{$color-dark-bg};
+    --text-color: #{$color-dark-text};
+    --border-color: #{$color-dark-border};
+    --hover-color: #{$color-dark-hover};
+  }
+}

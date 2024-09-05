@@ -1,0 +1,32 @@
+@import './styles/variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__theme {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    color: var(--text-color);
+  }
+}
