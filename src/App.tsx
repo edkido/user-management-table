@@ -8,9 +8,9 @@ import { ToggleTheme } from './components/ToggleTheme';
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <div className="App">
+      <div className="table">
         <ToggleTheme />
-        <h1 className='App__title'>User Management Table</h1>
+        <h1 className='table__title'>User Management Table</h1>
         <UserTable />
       </div>
     </Provider>

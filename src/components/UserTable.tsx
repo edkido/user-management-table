@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers, setFilter } from '../store/usersSlice';
 import { RootState, AppDispatch } from '../store';
 import { Loader } from './Loader';
-
-type FilterParameter = 'name' | 'username' | 'email' | 'phone';
+import { FilterParameter } from '../types/filterParameter';
+import { UserItem } from './UserItem';
 
 const UserTable: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -66,12 +66,13 @@ const UserTable: React.FC = () => {
         </thead>
         <tbody className="user-table__body">
           {filteredUsers.map((user) => (
-            <tr key={user.id} className="user-table__body-row">
-              <td className="user-table__body-cell">{user.name}</td>
-              <td className="user-table__body-cell">{user.username}</td>
-              <td className="user-table__body-cell">{user.email}</td>
-              <td className="user-table__body-cell">{user.phone}</td>
-            </tr>
+            <UserItem
+              key={user.id}
+              name={user.name}
+              username={user.username}
+              email={user.email}
+              phone={user.phone}
+            />
           ))}
         </tbody>
       </table>

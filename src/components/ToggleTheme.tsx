@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import '../styles/ToggleTheme.scss';
 
 export const ToggleTheme = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.add('light-mode');
+  }, []);
 
   const toggleTheme = () => {
     setIsDarkMode((prevMode) => !prevMode);
@@ -11,7 +15,7 @@ export const ToggleTheme = () => {
   };
 
   return (
-    <button onClick={toggleTheme} className='theme_switcher App__theme'>
+    <button onClick={toggleTheme} className='theme_switcher table__theme'>
       {isDarkMode ? 'Light' : 'Dark'} Mode
     </button>
   )

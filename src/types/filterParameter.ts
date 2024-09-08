@@ -1,0 +1,1 @@
+export type FilterParameter = 'name' | 'username' | 'email' | 'phone';
