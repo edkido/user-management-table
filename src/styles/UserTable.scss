@@ -41,7 +41,7 @@ body.dark-mode {
 
 .user-table {
   width: 100%;
-  min-width: 876px;
+  min-width: 880px;
   border-collapse: collapse;
   margin: 20px 0;
   font-size: 16px;
@@ -52,11 +52,12 @@ body.dark-mode {
 
   &__header {
     background-color: var(--border-color);
-    text-align: left;
+    text-align: center;
     border-bottom: 2px solid var(--border-color);
 
     &-cell {
       padding: 10px;
+      width: 220px;
       font-weight: bold;
       border-right: 1px solid var(--border-color);
       color: var(--text-color);
@@ -78,6 +79,7 @@ body.dark-mode {
 
     &-cell {
       padding: 10px;
+      width: 220px;
       border-bottom: 1px solid var(--border-color);
       border-right: 1px solid var(--border-color);
       color: var(--text-color);
